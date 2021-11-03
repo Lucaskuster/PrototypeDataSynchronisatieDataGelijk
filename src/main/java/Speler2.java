@@ -1,8 +1,7 @@
-import javax.swing.text.html.HTMLDocument;
-import java.time.chrono.IsoChronology;
 import java.util.LinkedList;
 
 public class Speler2 implements ISpeler {
+    private String naam;
     private int weekNr;
 
     // De tijdelijke dataopslag
@@ -11,9 +10,11 @@ public class Speler2 implements ISpeler {
     public Speler2(String naam) {
         this.naam = naam;
         this.weekNr = 1;
+
+        dataopslag2 = new LinkedList<Order>();
     }
 
-    public void plaatsOrder(int aantal){
+    public void plaatsOrder(int aantal) {
         Order order = new Order(weekNr, this.naam, aantal);
         dataopslag2.add(order);
         weekNr++;

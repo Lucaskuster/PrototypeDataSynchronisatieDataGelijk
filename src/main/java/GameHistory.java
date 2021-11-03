@@ -1,13 +1,18 @@
 import java.util.LinkedList;
 
 public class GameHistory {
-    private String GameNaam;
-    private LinkedList<ISpeler> spelers = new LinkedList();
+    private String gameNaam;
+    private LinkedList<Order> dataopslag = new LinkedList<>();
 
-    public GameHistory(GameNaam, ) {
-        GameNaam = gameNaam;
-        this.spelers = spelers;
+    public GameHistory(String gameNaam) {
+        this.gameNaam = gameNaam;
+    }
 
-        LinkedList<ISpeler> spelers
+    @Override
+    public String toString() {
+        return "GameHistory{" +
+                "gameNaam='" + gameNaam + '\'' +
+                ", dataopslag=" + dataopslag +
+                '}';
     }
 }
