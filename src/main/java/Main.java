@@ -1,6 +1,9 @@
+import java.util.LinkedList;
+
 public class Main {
 
     public static void main(String[] args) {
+
         Speler1 speler1 = new Speler1("naam1");
         Speler2 speler2 = new Speler2("naam1");
 
@@ -11,5 +14,9 @@ public class Main {
 
         System.out.println(speler1.toString());
         System.out.println(speler2.toString());
+    }
+
+    public void gameStart(){
+        GameHistory gameHistory = new GameHistory("test");
     }
 }
